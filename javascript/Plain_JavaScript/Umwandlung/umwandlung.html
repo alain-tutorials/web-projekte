@@ -1,0 +1,99 @@
+<html>
+	<head><title>Insert title here</title></head>
+	<body>
+	
+		<script type="text/javascript">
+		
+			var oneArray = new Array("","ein","zwei","drei","vier","funf","sechs");
+			var twoArray = new Array("sieben","acht","neun","zehn","elf","zwolf");
+			var motArray = oneArray.concat(twoArray);
+			var centaine = "";
+			
+			var nbreString = ""; 
+			var nbreInt = "";
+			
+			function starten()
+			{
+				var text = "geben Sie ein Zahl zwischen  0 et 999";
+				nbreString = prompt(text);
+				nbreInt = parseInt(nbreString);
+				//alert("Du hast "+nbreInt);
+				
+				if((nbreInt < 0) || (nbreInt > 999) || (isNaN(nbreString) == true))
+				{
+					alert("Das war falsch!\n geben Sie ein Zahl zwischen  0 et 999");
+					starten();
+				}
+				else if(nbreInt == 0)
+				{
+					alert("Du hast Null  Eingegeben !");	
+				}
+				else nombreLettre();
+			}
+			
+			function nombreLettre()
+			{	
+				if(nbreInt < 100) controlNom(nbreInt); 		
+				
+				if((nbreInt > 99) && (nbreInt <= 999)){	
+					var nbreTotale = nbreInt; // simplicité
+					var nbreModulo = nbreTotale % 100;
+					var nbreEntier = nbreTotale / 100;
+					nbreEntier = Math.floor(nbreEntier);
+					centaine = motArray[nbreEntier] + " hundert ";
+					nbreModulo = nbreTotale - (nbreEntier  * 100); 
+					controlNom(nbreModulo);
+				}
+			}
+			
+			function controlNom(nbreInt)
+			{
+				
+				if(nbreInt == 20){alert("Du hast " + centaine +" zwanzig  Eingegeben !");}
+				
+				if(nbreInt < 13){
+					alert("Du hast "+ centaine + motArray[nbreInt]+ "  Eingegeben !");
+				} // jusqu´ici ca marche
+				
+				
+				if((nbreInt > 12) && (nbreInt < 20)){		
+					var resultat = zwischen13Und19(nbreInt);
+					if(resultat == 7) 
+						alert("Du hast " +" siebzehn  Eingegeben !");
+					else 
+						alert("Du hast "+ centaine  + motArray[resultat]+ " zehn" +"  Eingegeben !");
+				}  // jusqu´ici ca marche
+				
+				if((nbreInt > 20) && (nbreInt <= 99)){
+					var resultat = zwischen21Und99(nbreInt);
+					alert("Du hast " + resultat +"  Eingegeben !");
+				}
+			}
+			
+			function zwischen21Und99(chaine){
+				chaine = chaine.toString();
+				var chaine1 = chaine.charAt(0);
+				var chaine2 = chaine.charAt(1);
+				
+				if(chaine1 == "7"){
+					var zahl =  motArray[chaine2] + " und siebzig";
+					return zahl;
+				}
+				
+				var zahl =  centaine + " "+ motArray[chaine2] + " und " + motArray[chaine1] + "zig";
+				return zahl;
+			}
+			
+			function zwischen13Und19(chaine)
+			{
+				chaine = chaine.toString();
+				var char1 = chaine.charAt(1);
+				var char1Int = parseInt(char1);
+				return char1Int;
+			}
+			
+			starten();
+		</script>
+	
+	</body>
+</html>
