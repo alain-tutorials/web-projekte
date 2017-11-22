@@ -1,0 +1,82 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: arial;
+	font-size: 15px;
+	line-height: 1.4em;
+	background: #F4F4F4;
+}
+
+#container{
+	background: #333333;
+	margin: 50px auto;
+	overflow: auto;
+	width: 60%;
+	min-height: 400px;
+}
+
+header h1{
+	color: #FFF;
+	font-size: 22px;
+	padding: 15px 0 10px 10px;
+	border-bottom: 1px solid #FFF;
+}
+
+
+#shouts{
+	width: 90%;
+	background: #F4F4F4;
+	height: 400px;
+	margin: 20px auto;
+	overflow: auto;
+}
+
+.shout{
+	list-style: none;
+	padding: 8px;
+	border-bottom:1px #CCC dotted;
+}
+
+.shout span{
+	color: #AAA;
+}
+
+#input{
+	width: 90%;
+	min-height: 80px;
+	margin: auto;
+	padding: 0;
+}
+
+#input input[type="text"]{
+	height:25px;
+	width:48%;
+	padding:3px;
+	margin-bottom:20px;
+	border:#666666 solid 1px;
+}
+
+#input .shout-btn{
+	padding:5px;
+	margin-bottom:30px;
+	width:100%;
+	margin:10px auto;
+}
+
+/* Formatierung von Fehler meldung*/
+.error{
+	background:red;
+	color:#ffffff;
+	padding:5px;
+	margin-bottom:20px;
+}
+
+/* Die beiden eingabefelde werden responsive */
+@media only screen and (max-width:768px){
+	#input input[type='text']{
+		width:98%;
+	}
+}
