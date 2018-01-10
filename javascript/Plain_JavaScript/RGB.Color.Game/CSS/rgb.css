@@ -1,0 +1,136 @@
+ 
+    /* Parent and all settingsdefault */
+    html, body{
+        /* background: green; */
+        width: 100%;
+        height: 100%;
+    margin: 0px; 
+    padding: 0%;
+        background: #fffff5;
+    }
+
+
+    /* header styling */
+    .header{
+        height: 25%;
+        background: #3980b9;
+    }
+
+    .notice-heading{
+        position: relative;
+        top: 20px;
+        width: 50%;
+        height: 75%;
+        /* border: 1px solid black; */
+        margin: auto;
+    }
+
+    .display-text{
+        width: 200px;
+        margin: auto;
+        color: #fffff5;
+        font-size: 20px;
+        /* font-weight: bold; */
+    }
+
+    /* modus setting */
+    .game-modus{
+        height: 7px;
+        width: 60%;
+        margin: auto;
+        /* border: 1px solid black; */
+        color: #3980b9;
+
+        font-weight: 900;
+        font-size: 20px;
+    }
+    
+    .level{ 
+        float: right;
+       
+    }
+
+    .level .span{
+         padding-left: 40px; 
+    }
+
+    .game-modus span{
+        display: inline-block;
+        /*  padding-right: 50px;    */
+        /* ;
+        padding: 5px; */
+    }
+
+    .result-try{    padding-left: 50px;}
+
+    /* main setting */
+    .main{
+        height: 100%;
+        background: #241a1a; 
+    }
+
+    .square-box{
+        position: relative;
+        top: 50px;
+        max-width: 600px;
+        margin: 20px auto;
+        /* height: 400px; */
+        /* border: 1px solid white; */
+        color: white;
+        padding-top: 20px;
+        padding-left: 40px;
+    }
+
+    .square{
+        width: 150px;
+        height: 150px;
+        display: inline-block;
+        border-radius: 10px;
+
+        margin: 10px;
+        padding: 5px;
+         background: white;
+        
+    }
+    
+
+  @media (max-width: 700px){
+      *{	box-sizing: border-box; }
+
+      .main{
+        min-height: 1200px;
+        background: #241a1a; 
+    }
+
+      .game-modus{
+          width: 100%;
+
+      }
+
+      .game-modus span{
+        display: inline-block;
+        padding: 0px;
+        margin: 0px;
+        
+    }
+
+       /* .square-box{
+       max-width: 600px; 
+       margin-left: auto;
+	    margin-right: auto;
+	   border: 0px solid white;
+    }
+     .square{
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        border-radius: 5px; */
+
+        margin: 5px;
+        padding: 2px;
+         background: white;
+        
+    }
+
+  }
+  
